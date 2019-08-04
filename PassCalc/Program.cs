@@ -36,7 +36,7 @@ namespace PassCalc
             var summonermodel = JsonConvert.DeserializeObject<SummonerModel>(summoner);
 
             var catalog = LCU("/lol-loot/v1/player-loot-map");
-            var catalogmodel = JsonConvert.DeserializeObject<List<PlayerLootMapModel>>(catalog);
+            var catalogmodel = JsonConvert.DeserializeObject<PlayerLootMapModel>(catalog);
 
             var missions = LCU("/lol-missions/v1/missions");
             var missionsmodel = JsonConvert.DeserializeObject<List<MissionModel>>(missions);
@@ -44,7 +44,7 @@ namespace PassCalc
             var matchlist = LCU($"/lol-acs/v2/matchlists?accountId={summonermodel.AccountId}&begIndex=0&endIndex=100");
             var matchlistmodel = JsonConvert.DeserializeObject<List<MatchHistoryModel>>(matchlist);
 
-            var projectTokens = catalogmodel.Find(l => l.LootId == "MATERIAL_323");
+            var projectTokens = catalogmodel.LootName["MATHERIAL_323"].Count();
 
             long pointsFromMissions = 0;
             var missionCount = 0;
@@ -69,7 +69,7 @@ namespace PassCalc
 
             var daysUntilEnd = (new DateTime(2019, 9, 2, 0, 0, 0) - nextTime).TotalDays;
             var firstWinGains = daysUntilEnd * 18;
-            var requiredAmount = requirement - projectTokens.Count;
+            var requiredAmount = requirement - projectTokens;
             var playingEveryDayAmount = requiredAmount - firstWinGains;
             var missionsRequiredAmount = playingEveryDayAmount - pointsFromMissions;
             var avgAmountPerDay = missionsRequiredAmount / daysUntilEnd;
@@ -80,7 +80,7 @@ namespace PassCalc
             var tftWins = avgAmountPerDay / tftWinPoints;
             var tftLosses = avgAmountPerDay / tftLosePoints;
 
-            var progressPerc = Math.Round((Convert.ToDouble(projectTokens.Count / requirement)) * 100);
+            var progressPerc = Math.Round((Convert.ToDouble(projectTokens / requirement)) * 100);
 
             Console.WriteLine($"You have {daysUntilEnd} days until the end of the event.");
             Console.WriteLine($"You can still get {firstWinGains} tokens off of first win of the days.");
