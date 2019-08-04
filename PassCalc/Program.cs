@@ -36,15 +36,15 @@ namespace PassCalc
             var summonermodel = JsonConvert.DeserializeObject<SummonerModel>(summoner);
 
             var catalog = LCU("/lol-loot/v1/player-loot-map");
-            var catalogmodel = JsonConvert.DeserializeObject<PlayerLootMapModel>(catalog);
+            var catalogmodel = JsonConvert.DeserializeObject<PlayerLootModel>(catalog);
 
             var missions = LCU("/lol-missions/v1/missions");
             var missionsmodel = JsonConvert.DeserializeObject<List<MissionModel>>(missions);
 
             var matchlist = LCU($"/lol-acs/v2/matchlists?accountId={summonermodel.AccountId}&begIndex=0&endIndex=100");
-            var matchlistmodel = JsonConvert.DeserializeObject<List<MatchHistoryModel>>(matchlist);
+            var matchlistmodel = JsonConvert.DeserializeObject<MatchHistoryModel>(matchlist);
 
-            var projectTokens = catalogmodel.LootName["MATHERIAL_323"].Count();
+            var projectTokens = catalogmodel.MATERIAL_323.count;
 
             long pointsFromMissions = 0;
             var missionCount = 0;
@@ -64,10 +64,10 @@ namespace PassCalc
                 }
             }
 
-            var curTime = new DateTime();
-            var nextTime = new DateTime(2019, 8, 1, 1, 0, 0, 0);
+            var curTime = DateTime.Now;
+            var nextTime = new DateTime(2019, 9, 2, 1, 0, 0, 0);
 
-            var daysUntilEnd = (new DateTime(2019, 9, 2, 0, 0, 0) - nextTime).TotalDays;
+            var daysUntilEnd = Math.Ceiling(Convert.ToDecimal((nextTime - curTime).TotalDays)-1);
             var firstWinGains = daysUntilEnd * 18;
             var requiredAmount = requirement - projectTokens;
             var playingEveryDayAmount = requiredAmount - firstWinGains;
@@ -80,10 +80,46 @@ namespace PassCalc
             var tftWins = avgAmountPerDay / tftWinPoints;
             var tftLosses = avgAmountPerDay / tftLosePoints;
 
-            var progressPerc = Math.Round((Convert.ToDouble(projectTokens / requirement)) * 100);
+            
+            int progressPerc = (int)Math.Round((double)(100 * projectTokens) / requirement);
 
             Console.WriteLine($"You have {daysUntilEnd} days until the end of the event.");
-            Console.WriteLine($"You can still get {firstWinGains} tokens off of first win of the days.");
+            Console.WriteLine($"You can still get {firstWinGains} tokens off of first win of the days.\n");
+
+            if (missionCount != 0)
+            {
+                Console.WriteLine($"You can still unlock { missionCount} mission {missionCount} for {pointsFromMissions} tokens.");
+            }
+            var missionAdd = $"Assuming you'll complete the missions stated above, you still need {missionsRequiredAmount}";
+
+            Console.WriteLine($"To get { requirement} tokens, you still need { requiredAmount}.\nAssuming you play every day, you still need { playingEveryDayAmount}. \n{ missionAdd}\n");
+            Console.WriteLine($"That's {Math.Ceiling(avgAmountPerDay)} tokens per day.");
+            Console.WriteLine($"That's {Math.Ceiling(aramWins)} aram wins per day ({aramWinPoints}), {Math.Ceiling(aramLosses)} aram losses ({aramLosePoints}).");
+            Console.WriteLine($"That's {Math.Ceiling(normalWins)} normal wins per day ({normalWinPoints}), {Math.Ceiling(normalLosses)} normal losses ({normalLosePoints}).");
+            Console.WriteLine($"That's {Math.Ceiling(tftWins)} tft top 4 per day ({tftWinPoints}), {Math.Ceiling(tftLosses)} tft bottom 4 losses ({tftLosePoints}).\n");
+            Console.WriteLine($"You are at {progressPerc}% of your goal of {requirement}.");
+
+
+
+
+            //THIS PART DOESNT WORK YET
+ //           var pointsToday = 0;
+
+
+ //           var needTokensToday = avgAmountPerDay - pointsToday;
+ //           var aramWinsNeeded = Math.Ceiling(needTokensToday / aramWinPoints);
+ //           var aramLossesNeeded = Math.Ceiling(needTokensToday / aramLosePoints);
+ //           var normalLossesNeeded = Math.Ceiling(needTokensToday / normalLosePoints);
+ //           var normalWinsNeeded = Math.Ceiling(needTokensToday / normalWinPoints);
+ //           var tftLossesNeeded = Math.Ceiling(needTokensToday / tftLosePoints);
+ //           var tftWinsNeeded = Math.Ceiling(needTokensToday / tftWinPoints);
+ //           var needMessage = needTokensToday < 0 ? "That's enough for today!" : $"You need { Math.Ceiling(needTokensToday)} more! That's {normalWinsNeeded}~{normalLossesNeeded} normals or {aramWinsNeeded}~{aramLossesNeeded} aram games or {tftWinsNeeded}~{tftLossesNeeded} TFT games!";
+
+ //           Console.WriteLine($"You got { pointsToday} tokens today. { needMessage}");
+	
+	//var firstWinUnlockMillis = new DateTime(firstWinMission.EarnedDate + firstWinMission.CooldownTimeMillis) - curTime;
+ //           Console.WriteLine(firstWinMission.Status == "COMPLETED" ? $"Your first win of the day mission unlocks in { (firstWinUnlockMillis)}" : "You can still get your first win of the day for 18 tokens!");
+
         }
         public string LCU(string url)
         {

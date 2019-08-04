@@ -7,81 +7,540 @@ using System.Threading.Tasks;
 
 namespace PassCalc.Models
 {
-    public partial class PlayerLootMapModel
+
+    public class PlayerLootModel
     {
-        [JsonProperty("asset")]
-        public string Asset { get; set; }
+        public Test test { get; set; }
+        public CHAMPION_TOKEN_6142 CHAMPION_TOKEN_6142 { get; set; }
+        public CHAMPION_TOKEN_6201 CHAMPION_TOKEN_6201 { get; set; }
+        public CHAMPION_TOKEN_739 CHAMPION_TOKEN_739 { get; set; }
+        public CHAMPION_TOKEN_7412 CHAMPION_TOKEN_7412 { get; set; }
+        public CHAMPION_TOKEN_78 CHAMPION_TOKEN_78 { get; set; }
+        public CHAMPION_TOKEN_799 CHAMPION_TOKEN_799 { get; set; }
+        public CHEST_Champion_Mastery CHEST_champion_mastery { get; set; }
+        public CURRENCY_Champion CURRENCY_champion { get; set; }
+        public CURRENCY_Cosmetic CURRENCY_cosmetic { get; set; }
+        public MATERIAL_287 MATERIAL_287 { get; set; }
+        public MATERIAL_323 MATERIAL_323 { get; set; }
+        public MATERIAL_Clashtickets MATERIAL_clashtickets { get; set; }
+        public MATERIAL_Key_Fragment MATERIAL_key_fragment { get; set; }
+    }
 
-        [JsonProperty("count")]
-        public long Count { get; set; }
+    public class Test
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("disenchantLootName")]
-        public string DisenchantLootName { get; set; }
+    public class CHAMPION_TOKEN_6142
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("disenchantValue")]
-        public long DisenchantValue { get; set; }
+    public class CHAMPION_TOKEN_6201
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("expiryTime")]
-        public long ExpiryTime { get; set; }
+    public class CHAMPION_TOKEN_739
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("isNew")]
-        public bool IsNew { get; set; }
+    public class CHAMPION_TOKEN_7412
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("isRental")]
-        public bool IsRental { get; set; }
+    public class CHAMPION_TOKEN_78
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("itemDesc")]
-        public string ItemDesc { get; set; }
+    public class CHAMPION_TOKEN_799
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("localizedDescription")]
-        public string LocalizedDescription { get; set; }
+    public class CHEST_Champion_Mastery
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("localizedRecipeSubtitle")]
-        public string LocalizedRecipeSubtitle { get; set; }
+    public class CURRENCY_Champion
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("lootId")]
-        public string LootId { get; set; }
+    public class CURRENCY_Cosmetic
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("lootName")]
-        public string LootName { get; set; }
+    public class MATERIAL_287
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("parentStoreItemId")]
-        public long ParentStoreItemId { get; set; }
+    public class MATERIAL_323
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("refId")]
-        public string RefId { get; set; }
+    public class MATERIAL_Clashtickets
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
+    }
 
-        [JsonProperty("rentalGames")]
-        public long RentalGames { get; set; }
-
-        [JsonProperty("rentalSeconds")]
-        public long RentalSeconds { get; set; }
-
-        [JsonProperty("shadowPath")]
-        public string ShadowPath { get; set; }
-
-        [JsonProperty("splashPath")]
-        public string SplashPath { get; set; }
-
-        [JsonProperty("storeItemId")]
-        public long StoreItemId { get; set; }
-
-        [JsonProperty("tags")]
-        public string Tags { get; set; }
-
-        [JsonProperty("tilePath")]
-        public string TilePath { get; set; }
-
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
-        [JsonProperty("upgradeEssenceValue")]
-        public long UpgradeEssenceValue { get; set; }
-
-        [JsonProperty("upgradeLootName")]
-        public string UpgradeLootName { get; set; }
-
-        [JsonProperty("value")]
-        public long Value { get; set; }
+    public class MATERIAL_Key_Fragment
+    {
+        public string asset { get; set; }
+        public int count { get; set; }
+        public string disenchantLootName { get; set; }
+        public int disenchantValue { get; set; }
+        public string displayCategories { get; set; }
+        public int expiryTime { get; set; }
+        public bool isNew { get; set; }
+        public bool isRental { get; set; }
+        public string itemDesc { get; set; }
+        public string itemStatus { get; set; }
+        public string localizedDescription { get; set; }
+        public string localizedName { get; set; }
+        public string localizedRecipeSubtitle { get; set; }
+        public string localizedRecipeTitle { get; set; }
+        public string lootId { get; set; }
+        public string lootName { get; set; }
+        public string parentItemStatus { get; set; }
+        public int parentStoreItemId { get; set; }
+        public string rarity { get; set; }
+        public string redeemableStatus { get; set; }
+        public string refId { get; set; }
+        public int rentalGames { get; set; }
+        public int rentalSeconds { get; set; }
+        public string shadowPath { get; set; }
+        public string splashPath { get; set; }
+        public int storeItemId { get; set; }
+        public string tags { get; set; }
+        public string tilePath { get; set; }
+        public string type { get; set; }
+        public string upgradeEssenceName { get; set; }
+        public int upgradeEssenceValue { get; set; }
+        public string upgradeLootName { get; set; }
+        public int value { get; set; }
     }
 }
