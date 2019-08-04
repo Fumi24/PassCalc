@@ -1,0 +1,12 @@
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\PassCalc.exe.config
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\PassCalc.exe
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\PassCalc.pdb
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\websocket-sharp.dll
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\bin\Debug\websocket-sharp.xml
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\obj\Debug\PassCalc.csproj.CoreCompileInputs.cache
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\obj\Debug\PassCalc.csproj.CopyComplete
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\obj\Debug\PassCalc.exe
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\obj\Debug\PassCalc.pdb
+C:\Users\Fumse\source\repos\PassCalc\PassCalc\obj\Debug\PassCalc.csprojAssemblyReference.cache
