@@ -25,7 +25,8 @@ namespace PassCalc
         {
             Program p = new Program();
             p.run();
-
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
         }
 
         public void run()
@@ -88,7 +89,7 @@ namespace PassCalc
 
             if (missionCount != 0)
             {
-                Console.WriteLine($"You can still unlock { missionCount} mission {missionCount} for {pointsFromMissions} tokens.");
+                Console.WriteLine($"You can still unlock { missionCount} mission for {pointsFromMissions} tokens.");
             }
             var missionAdd = $"Assuming you'll complete the missions stated above, you still need {missionsRequiredAmount}";
 
