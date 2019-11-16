@@ -18,8 +18,8 @@ namespace PassCalc
         public static int aramWinPoints = 8;
         public static int normalLosePoints = 6;
         public static int normalWinPoints = 12;
-        public static int tftLosePoints = 3;
-        public static int tftWinPoints = 6;
+        public static int tftLosePoints = 4;
+        public static int tftWinPoints = 8;
 
         private Tuple<Process, string, string> processInfo;
         static void Main(string[] args)
