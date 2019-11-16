@@ -4,4 +4,6 @@ A simple console app that access your league of legends client and finds out how
 
 Simply type in how many tokens you want e.g. If you want Prestige Riven and Qiyana you type 4000, if you want the UWU emote you type 75.
 
+Download prebuilt exe files [Here](https://github.com/Fumi24/PassCalc/releases)
+
 Shout out to Querijn for the orignial idea.
