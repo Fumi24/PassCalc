@@ -21,7 +21,7 @@ namespace PassCalc.Models
         public CURRENCY_Champion CURRENCY_champion { get; set; }
         public CURRENCY_Cosmetic CURRENCY_cosmetic { get; set; }
         public MATERIAL_287 MATERIAL_287 { get; set; }
-        public MATERIAL_323 MATERIAL_323 { get; set; }
+        public MATERIAL_323 MATERIAL_337 { get; set; }
         public MATERIAL_Clashtickets MATERIAL_clashtickets { get; set; }
         public MATERIAL_Key_Fragment MATERIAL_key_fragment { get; set; }
     }
