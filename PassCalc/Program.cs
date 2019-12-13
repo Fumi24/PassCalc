@@ -13,7 +13,7 @@ namespace PassCalc
 {
     class Program
     {
-        public static int requirement = 0;
+        public static int requirement = 2000;
         public static int aramLosePoints = 4;
         public static int aramWinPoints = 8;
         public static int normalLosePoints = 6;
@@ -51,22 +51,22 @@ namespace PassCalc
 
             try
             {
-                projectTokens = 60;
+                projectTokens = 0;
             }
             catch(Exception e)
             {
-                projectTokens = 60;
+                projectTokens = 0;
             }
             long pointsFromMissions = 0;
             var missionCount = 0;
-            var proejctMissions = missionsmodel.FindAll(m => m.SeriesName == "Worlds2019B_series");
+            var proejctMissions = missionsmodel.FindAll(m => m.SeriesName == "Night_Dawn2019_series");
             var firstWinMissionget = proejctMissions.FindAll(m => m.MissionType == "REPEATING");
             var pendingMissions = proejctMissions.FindAll(m => m.Status == "PENDING");
             var firstWinMission = firstWinMissionget.Count() != 0 ? firstWinMissionget[0] : null;
 
             foreach (var mission in pendingMissions)
             {
-                var rewards = mission.Rewards.FindAll(r => r.ItemId == "lol_worlds_nonpremium_token");
+                var rewards = mission.Rewards.FindAll(r => r.ItemId == "MATERIAL_347");
 
                 foreach (var reward in rewards)
                 {
@@ -76,7 +76,7 @@ namespace PassCalc
             }
 
             var curTime = DateTime.Now;
-            var nextTime = new DateTime(2019, 11, 19, 0, 0, 0, 0);
+            var nextTime = new DateTime(2020, 1, 13, 0, 0, 0, 0);
 
             var daysUntilEnd = Math.Ceiling(Convert.ToDecimal((nextTime - curTime).TotalDays) - 1);
             var firstWinGains = daysUntilEnd * 18;
