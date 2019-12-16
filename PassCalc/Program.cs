@@ -47,16 +47,8 @@ namespace PassCalc
 
             var matchlist = LCU($"/lol-acs/v2/matchlists?accountId={summonermodel.AccountId}&begIndex=0&endIndex=100");
             var matchlistmodel = JsonConvert.DeserializeObject<MatchHistoryModel>(matchlist);
-            var projectTokens = 0;
+            var projectTokens = catalogmodel.MATERIAL_347.count;
 
-            try
-            {
-                projectTokens = 0;
-            }
-            catch(Exception e)
-            {
-                projectTokens = 0;
-            }
             long pointsFromMissions = 0;
             var missionCount = 0;
             var proejctMissions = missionsmodel.FindAll(m => m.SeriesName == "Night_Dawn2019_series");
@@ -66,7 +58,7 @@ namespace PassCalc
 
             foreach (var mission in pendingMissions)
             {
-                var rewards = mission.Rewards.FindAll(r => r.ItemId == "MATERIAL_347");
+                var rewards = mission.Rewards.FindAll(r => r.ItemId == "lol_nightdawn_nonpremium_token");
 
                 foreach (var reward in rewards)
                 {
