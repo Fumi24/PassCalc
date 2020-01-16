@@ -10,9 +10,9 @@ namespace PassCalc.Models
 
     public class PlayerLootModel
     {
-        public MATERIAL_347 MATERIAL_347 { get; set; }
+        public MATERIAL_358 MATERIAL_358 { get; set; }
     }
-    public class MATERIAL_347
+    public class MATERIAL_358
     {
         public string asset { get; set; }
         public int count { get; set; }
