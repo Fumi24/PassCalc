@@ -71,9 +71,9 @@ namespace PassCalc
             var nextTime = new DateTime(2020, 2, 18, 0, 0, 0, 0);
 
             var daysUntilEnd = Math.Ceiling(Convert.ToDecimal((nextTime - curTime).TotalDays) - 1);
-            var firstWinGains = daysUntilEnd * 18;
+            var weekbonus = (int)Math.Round(daysUntilEnd / 7 * 200);
             var requiredAmount = requirement - projectTokens;
-            var playingEveryDayAmount = requiredAmount - firstWinGains;
+            var playingEveryDayAmount = requiredAmount - weekbonus;
             var missionsRequiredAmount = playingEveryDayAmount - pointsFromMissions;
             var avgAmountPerDay = missionsRequiredAmount / daysUntilEnd;
             var aramWins = avgAmountPerDay / aramWinPoints;
@@ -87,7 +87,7 @@ namespace PassCalc
             int progressPerc = (int)Math.Round((double)(100 * projectTokens) / requirement);
 
             Console.WriteLine($"You have {daysUntilEnd} days until the end of the event.");
-            Console.WriteLine($"You can still get {firstWinGains} tokens off of first win of the days.\n");
+            Console.WriteLine($"You can still get {weekbonus} from week bonuses\n");
 
             if (missionCount != 0)
             {
